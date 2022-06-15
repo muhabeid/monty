@@ -4,7 +4,7 @@ Monty byte code files
 
 Files containing Monty byte codes usually have the .m extension. Most of the industry uses this standard but it is not required by the specification of the language. There is not more than one instruction per line. There can be any number of spaces before or after the opcode and its argument:
 
-julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ cat -e bytecodes/000.m push 0$ push 1$ push 2$ push 3$ pall $ push 4$ push 5 $ push 6 $ pall$ julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ Monty byte code files can contain blank lines (empty or made of spaces only, and any additional text after the opcode or its required argument is not taken into account:
+julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ cat -e bytecodes/000.m push 0$ push 1$ push 2$ push 3$ pall $ push 4$ push 5 $ push 6 $ pall$ julien@ubuntu:/0x19. Stack (LIFO) & queue (FIFO)$ Monty byte code files can contain blank lines (empty or made of spaces only, and any additional text after the opcode or its required argument is not taken into account:
 
 julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ cat -e bytecodes/001.m push 0 Push 0 onto the stack$ push 1 Push 1 onto the stack$ $ push 2$ push 3$ pall $ $ $ $ push 4$ $ push 5 $ push 6 $ $ pall This is the end of our program. Monty is awesome!$ julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ The monty program
 
@@ -16,7 +16,7 @@ Usage: push where is an integer if is not an integer or if there is no argument 
 
 The opcode pall prints all the values on the stack, starting from the top of the stack.
 
-Usage pall Format: see example If the stack is empty, don't print anything julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ cat -e bytecodes/00.m push 1$ push 2$ push 3$ pall$ julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ ./monty bytecodes/00.m 3 2 1 julien@ubuntu:~/0x18. Stack (LIFO) & queue (FIFO)$
+Usage pall Format: see example If the stack is empty, don't print anything julien@ubuntu:/0x19. Stack (LIFO) & queue (FIFO)$ cat -e bytecodes/00.m push 1$ push 2$ push 3$ pall$ julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ ./monty bytecodes/00.m 3 2 1 julien@ubuntu:~/0x18. Stack (LIFO) & queue (FIFO)$
 
 pint mandatory Implement the pint opcode.
 The pint opcode
@@ -29,13 +29,13 @@ The pop opcode
 
 The opcode pop removes the top element of the stack.
 
-Usage: pop if the stack is empty, print L<line_number>: can't pop an empty stack, followed by a new line, and exit with the status EXIT_FAILURE julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ cat bytecodes/07.m push 1 push 2 push 3 pall pop pall pop pall pop pall julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ ./monty bytecodes/07.m 3 2 1 2 1 1 julien@ubuntu:~/0x18. Stack (LIFO) & queue (FIFO)$ 3. swap mandatory Implement the swap opcode.
+Usage: pop if the stack is empty, print L<line_number>: can't pop an empty stack, followed by a new line, and exit with the status EXIT_FAILURE julien@ubuntu:/0x19. Stack (LIFO) & queue (FIFO)$ cat bytecodes/07.m push 1 push 2 push 3 pall pop pall pop pall pop pall julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ ./monty bytecodes/07.m 3 2 1 2 1 1 julien@ubuntu:~/0x18. Stack (LIFO) & queue (FIFO)$ 3. swap mandatory Implement the swap opcode.
 
 The swap opcode
 
 The opcode swap swaps the top two elements of the stack.
 
-Usage: swap If the stack is less than two element long, print L<line_number>: can't swap, stack too short, followed by a new line, and exit with the status EXIT_FAILURE julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ cat bytecodes/09.m push 1 push 2 push 3 pall swap pall julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ ./monty bytecodes/09.m 3 2 1 2 3 1 julien@ubuntu:~/0x18. Stack (LIFO) & queue (FIFO)$ 4. add mandatory Implement the add opcode.
+Usage: swap If the stack is less than two element long, print L<line_number>: can't swap, stack too short, followed by a new line, and exit with the status EXIT_FAILURE julien@ubuntu:/0x19. Stack (LIFO) & queue (FIFO)$ cat bytecodes/09.m push 1 push 2 push 3 pall swap pall julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ ./monty bytecodes/09.m 3 2 1 2 3 1 julien@ubuntu:~/0x18. Stack (LIFO) & queue (FIFO)$ 4. add mandatory Implement the add opcode.
 
 The add opcode
 
@@ -43,7 +43,7 @@ The opcode add adds the top two elements of the stack.
 
 Usage: add If the stack is less than two element long, print L<line_number>: can't add, stack too short, followed by a new line, and exit with the status EXIT_FAILURE The result is stored in the second top element of the stack, and the top element is removed, so that at the end: the top element of the stack contains the result the stack is one element shorter julien@ubuntu:~/0x18. Stack (LIFO) & queue (FIFO)$ cat bytecodes/12.m push 1 push 2 push 3 pall add pall
 
-julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ ./monty bytecodes/12.m 3 2 1 5 1 julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ 5. nop mandatory Implement the nop opcode.
+julien@ubuntu:/0x19. Stack (LIFO) & queue (FIFO)$ ./monty bytecodes/12.m 3 2 1 5 1 julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ 5. nop mandatory Implement the nop opcode.
 
 The nop opcode
 
@@ -55,7 +55,7 @@ The sub opcode
 
 The opcode sub subtracts the top element of the stack from the second top element of the stack.
 
-Usage: sub If the stack is less than two element long, print L<line_number>: can't sub, stack too short, followed by a new line, and exit with the status EXIT_FAILURE The result is stored in the second top element of the stack, and the top element is removed, so that at the end: the top element of the stack contains the result the stack is one element shorter julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ cat bytecodes/19.m push 1 push 2 push 10 push 3 sub pall julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ ./monty bytecodes/19.m 7 2 1 julien@ubuntu:~/0x18. Stack (LIFO) & queue (FIFO)$ 7. div #advanced Implement the div opcode.
+Usage: sub If the stack is less than two element long, print L<line_number>: can't sub, stack too short, followed by a new line, and exit with the status EXIT_FAILURE The result is stored in the second top element of the stack, and the top element is removed, so that at the end: the top element of the stack contains the result the stack is one element shorter julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ cat bytecodes/19.m push 1 push 2 push 10 push 3 sub pall julien@ubuntu:/0x19. Stack (LIFO) & queue (FIFO)$ ./monty bytecodes/19.m 7 2 1 julien@ubuntu:~/0x18. Stack (LIFO) & queue (FIFO)$ 7. div #advanced Implement the div opcode.
 
 The div opcode
 
@@ -80,19 +80,19 @@ The pchar opcode
 
 The opcode pchar prints the char at the top of the stack, followed by a new line.
 
-Usage: pchar The integer stored at the top of the stack is treated as the ascii value of the character to be printed If the value is not in the ascii table (man ascii) print L<line_number>: can't pchar, value out of range, followed by a new line, and exit with the status EXIT_FAILURE If the stack is empty, print L<line_number>: can't pchar, stack empty, followed by a new line, and exit with the status EXIT_FAILURE julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ cat bytecodes/28.m push 72 pchar julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ ./monty bytecodes/28.m H julien@ubuntu:~/0x18. Stack (LIFO) & queue (FIFO)$ 12. pstr #advanced Implement the pstr opcode.
+Usage: pchar The integer stored at the top of the stack is treated as the ascii value of the character to be printed If the value is not in the ascii table (man ascii) print L<line_number>: can't pchar, value out of range, followed by a new line, and exit with the status EXIT_FAILURE If the stack is empty, print L<line_number>: can't pchar, stack empty, followed by a new line, and exit with the status EXIT_FAILURE julien@ubuntu:/0x19. Stack (LIFO) & queue (FIFO)$ cat bytecodes/28.m push 72 pchar julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ ./monty bytecodes/28.m H julien@ubuntu:~/0x18. Stack (LIFO) & queue (FIFO)$ 12. pstr #advanced Implement the pstr opcode.
 
 The pstr opcode
 
 The opcode pstr prints the string starting at the top of the stack, followed by a new line.
 
-Usage: pstr The integer stored in each element of the stack is treated as the ascii value of the character to be printed The string stops where: the stack is over the value of the element is 0 the value of the element is not in the ascii table If the stack is empty, print only a new line julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ cat bytecodes/31.m push 1 push 2 push 3 push 4 push 0 push 110 push 0 push 110 push 111 push 116 push 114 push 101 push 98 push 108 push 111 push 72 pstr julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ ./monty bytecodes/31.m Holberton julien@ubuntu:~/0x18. Stack (LIFO) & queue (FIFO)$ 13. rotl #advanced Implement the rotl opcode.
+Usage: pstr The integer stored in each element of the stack is treated as the ascii value of the character to be printed The string stops where: the stack is over the value of the element is 0 the value of the element is not in the ascii table If the stack is empty, print only a new line julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ cat bytecodes/31.m push 1 push 2 push 3 push 4 push 0 push 110 push 0 push 110 push 111 push 116 push 114 push 101 push 98 push 108 push 111 push 72 pstr julien@ubuntu:/0x19. Stack (LIFO) & queue (FIFO)$ ./monty bytecodes/31.m Holberton julien@ubuntu:~/0x18. Stack (LIFO) & queue (FIFO)$ 13. rotl #advanced Implement the rotl opcode.
 
 The rotl opcode
 
 The opcode rotl rotates the stack to the top.
 
-Usage: rotl The top element of the stack becomes the last one, and the second top element of the stack becomes the first one rotl never fails julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ cat bytecodes/35.m push 1 push 2 push 3 push 4 push 5 push 6 push 7 push 8 push 9 push 0 pall rotl pall julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ ./monty bytecodes/35.m 0 9 8 7 6 5 4 3 2 1 9 8 7 6 5 4 3 2 1 0 julien@ubuntu:~/0x18. Stack (LIFO) & queue (FIFO)$ 14. rotr #advanced Implement the rotr opcode.
+Usage: rotl The top element of the stack becomes the last one, and the second top element of the stack becomes the first one rotl never fails julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ cat bytecodes/35.m push 1 push 2 push 3 push 4 push 5 push 6 push 7 push 8 push 9 push 0 pall rotl pall julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ ./monty bytecodes/35.m 0 9 8 7 6 5 4 3 2 1 9 8 7 6 5 4 3 2 1 0 julien@ubuntu:~/0x19. Stack (LIFO) & queue (FIFO)$ 14. rotr #advanced Implement the rotr opcode.
 
 The rotr opcode
 
@@ -110,7 +110,7 @@ The opcode queue sets the format of the data to a queue (FIFO).
 
 Usage: queue When switching mode:
 
-the top of the stack becomes the front of the queue the front of the queue becomes the top of the stack julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ cat bytecodes/47.m queue push 1 push 2 push 3 pall stack push 4 push 5 push 6 pall add pall queue push 11111 add pall julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ ./monty bytecodes/47.m 1 2 3 6 5 4 1 2 3 11 4 1 2 3 15 1 2 3 11111 julien@ubuntu:~/0x18. Stack (LIFO) & queue (FIFO)$ 16. Holberton #advanced Write a Brainf*ck script that prints Holberton, followed by a new line.
+the top of the stack becomes the front of the queue the front of the queue becomes the top of the stack julien@ubuntu:/0x18. Stack (LIFO) & queue (FIFO)$ cat bytecodes/47.m queue push 1 push 2 push 3 pall stack push 4 push 5 push 6 pall add pall queue push 11111 add pall julien@ubuntu:/0x19. Stack (LIFO) & queue (FIFO)$ ./monty bytecodes/47.m 1 2 3 6 5 4 1 2 3 11 4 1 2 3 15 1 2 3 11111 julien@ubuntu:~/0x18. Stack (LIFO) & queue (FIFO)$ 16. Holberton #advanced Write a Brainf*ck script that prints Holberton, followed by a new line.
 
 All your Brainfck files should be stored inside the brainfuck sub directory You can install the bf interpreter to test your code: sudo apt-get install bf Read: Brainfck julien@ubuntu:/brainfuck$ bf 1000-holberton.bf Holberton julien@ubuntu:/brainfuck$ 17. Add two digits #advanced Add two digits given by the user.
 
