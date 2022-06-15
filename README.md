@@ -1,4 +1,4 @@
-0x18. C - Stacks, Queues - LIFO, FIFO 0. push, pall mandatory Implement the push and pall opcodes.
+0x19. C - Stacks, Queues - LIFO, FIFO 0. push, pall mandatory Implement the push and pall opcodes.
 
 Monty byte code files
 
